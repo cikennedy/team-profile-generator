@@ -75,21 +75,25 @@ function teamProfile() {
                 type: 'input',
                 name: 'manager',
                 message: 'Please enter the name of the team manager.',
+                // Add validation
             },
             {
                 type: 'input',
                 name: 'managerID',
                 message: 'Please enter the employee ID of the team manager.',
+                // Add validation
             },
             {
                 type: 'input',
                 name: 'managerEmail',
                 message: 'Please enter the email address of the team manager.',
+                // Add validation
             },
             {
                 type: 'input',
                 name: 'managerOffice',
                 message: 'Please enter the office number of the team manager.',
+                // Add validation
             },
         ])
     }
@@ -116,21 +120,25 @@ function teamProfile() {
                 type: 'input',
                 name: 'engineer',
                 message: 'Please enter the name of the engineer.',
+                // Add validation
             },
             {
                 type: 'input',
                 name: 'engineerID',
                 message: 'Please enter the employee ID of the engineer.',
+                // Add validation
             },
             {
                 type: 'input',
                 name: 'engineerEmail',
                 message: 'Please enter the email address of the engineer.',
+                // Add validation
             },
             {
                 type: 'input',
                 name: 'engineerGithub',
                 message: 'Please enter the GitHub username of the engineer.',
+                // Add validation
             },
         ])
     }
@@ -141,21 +149,25 @@ function teamProfile() {
                 type: 'input',
                 name: 'intern',
                 message: 'Please enter the name of the intern.',
+                // Add validation
             },
             {
                 type: 'input',
                 name: 'internID',
                 message: 'Please enter the employee ID of the intern.',
+                // Add validation
             },
             {
                 type: 'input',
                 name: 'internEmail',
                 message: 'Please enter the email address of the intern.',
+                // Add validation
             },
             {
                 type: 'input',
                 name: 'school',
                 message: 'Please enter the school of the intern.',
+                // Add validation
             },
         ])
     }
