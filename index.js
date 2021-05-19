@@ -61,4 +61,29 @@ function teamProfile() {
             },
         ])
     }
+
+    function teamEngineer() {
+        inquirer.prompt([
+            {
+                type: 'input',
+                name: 'engineer',
+                message: 'Please enter the name of the engineer.',
+            },
+            {
+                type: 'input',
+                name: 'engineerID',
+                message: 'Please enter the employee ID of the engineer.',
+            },
+            {
+                type: 'input',
+                name: 'engineerEmail',
+                message: 'Please enter the email address of the engineer.',
+            },
+            {
+                type: 'input',
+                name: 'engineerGithub',
+                message: 'Please enter the GitHub username of the engineer.',
+            },
+        ])
+    }
 }
