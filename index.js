@@ -86,4 +86,29 @@ function teamProfile() {
             },
         ])
     }
+
+    function teamIntern() {
+        inquirer.prompt([
+            {
+                type: 'input',
+                name: 'intern',
+                message: 'Please enter the name of the intern.',
+            },
+            {
+                type: 'input',
+                name: 'internID',
+                message: 'Please enter the employee ID of the intern.',
+            },
+            {
+                type: 'input',
+                name: 'internEmail',
+                message: 'Please enter the email address of the intern.',
+            },
+            {
+                type: 'input',
+                name: 'school',
+                message: 'Please enter the school of the intern.',
+            },
+        ])
+    }
 }
