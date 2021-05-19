@@ -45,4 +45,20 @@ function teamProfile() {
             },
         ])
     }
+
+    function addTeam() {
+        inquirer.prompt([
+            {
+                type: 'list',
+                name: 'teamChoice',
+                message: 'Which additional member would you like to add to the team?',
+                choices: [
+                    'Engineer',
+                    'Intern',
+                    'None, finish building my team.'
+                ]
+
+            },
+        ])
+    }
 }
