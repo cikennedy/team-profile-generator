@@ -43,7 +43,7 @@ function teamProfile() {
                     if (answer !== '') {
                         return true;
                     }
-                    return "Please enter a name."
+                    return "Please enter a name.";
 
                 }
             },
@@ -59,7 +59,7 @@ function teamProfile() {
                     if (answerPass) {
                         return true;
                     }
-                    return "Please enter a valid manager ID number."
+                    return "Please enter a valid manager ID number.";
                 }
             },
             {
@@ -68,7 +68,13 @@ function teamProfile() {
                 message: 'Please enter the email address of the team manager.',
                 // Add validation
                 validate: answer => {
-                    
+                    const answerPass = answer.match(
+                        /\S+@\S+\.\S+/
+                    );
+                    if (answerPass) {
+                        return true;
+                    }
+                    return "Please enter a valid email.";
                 }
             },
             {
@@ -77,7 +83,13 @@ function teamProfile() {
                 message: 'Please enter the office number of the team manager.',
                 // Add validation
                 validate: answer => {
-                    
+                    const answerPass = answer.match(
+                        /^[1-9]\d*$/
+                    );
+                    if (answerPass) {
+                        return true;
+                    }
+                    return "Please enter a valid office ID number.";
                 }
             },
         ])
