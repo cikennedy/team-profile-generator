@@ -40,6 +40,10 @@ function teamProfile() {
                 message: 'Please enter the name of the team manager.',
                 // Add validation
                 validate: answer => {
+                    if (answer !== '') {
+                        return true;
+                    }
+                    return "Please enter a name."
 
                 }
             },
