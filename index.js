@@ -44,7 +44,6 @@ function teamProfile() {
                         return true;
                     }
                     return "Please enter a valid name.";
-
                 }
             },
             {
@@ -161,7 +160,10 @@ function teamProfile() {
                 message: 'Please enter the GitHub username of the engineer.',
                 // Add validation
                 validate: answer => {
-                    
+                    if (answer !== '') {
+                        return true;
+                    }
+                    return "Please enter a valid GitHub username.";
                 }
             },
         ])
@@ -217,7 +219,10 @@ function teamProfile() {
                 message: 'Please enter the school of the intern.',
                 // Add validation
                 validate: answer => {
-                    
+                    if (answer !== '') {
+                        return true;
+                    }
+                    return "Please enter a school.";
                 }
             },
         ])
