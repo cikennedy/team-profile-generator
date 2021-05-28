@@ -43,7 +43,7 @@ function teamProfile() {
                     if (answer !== '') {
                         return true;
                     }
-                    return "Please enter a name.";
+                    return "Please enter a valid name.";
 
                 }
             },
@@ -119,7 +119,10 @@ function teamProfile() {
                 message: 'Please enter the name of the engineer.',
                 // Add validation
                 validate: answer => {
-                    
+                    if (answer !== '') {
+                        return true;
+                    }
+                    return "Please enter a valid name.";
                 }
             },
             {
@@ -128,7 +131,13 @@ function teamProfile() {
                 message: 'Please enter the employee ID of the engineer.',
                 // Add validation
                 validate: answer => {
-                    
+                    const answerPass = answer.match(
+                        /^[1-9]\d*$/
+                    );
+                    if (answerPass) {
+                        return true;
+                    }
+                    return "Please enter a valid engineer ID number.";
                 }
             },
             {
@@ -137,7 +146,13 @@ function teamProfile() {
                 message: 'Please enter the email address of the engineer.',
                 // Add validation
                 validate: answer => {
-                    
+                    const answerPass = answer.match(
+                        /\S+@\S+\.\S+/
+                    );
+                    if (answerPass) {
+                        return true;
+                    }
+                    return "Please enter a valid email.";
                 }
             },
             {
@@ -160,7 +175,10 @@ function teamProfile() {
                 message: 'Please enter the name of the intern.',
                 // Add validation
                 validate: answer => {
-                    
+                    if (answer !== '') {
+                        return true;
+                    }
+                    return "Please enter a valid name.";
                 }
             },
             {
@@ -169,7 +187,13 @@ function teamProfile() {
                 message: 'Please enter the employee ID of the intern.',
                 // Add validation
                 validate: answer => {
-                    
+                    const answerPass = answer.match(
+                        /^[1-9]\d*$/
+                    );
+                    if (answerPass) {
+                        return true;
+                    }
+                    return "Please enter a valid intern ID number.";
                 }
             },
             {
@@ -178,7 +202,13 @@ function teamProfile() {
                 message: 'Please enter the email address of the intern.',
                 // Add validation
                 validate: answer => {
-                    
+                    const answerPass = answer.match(
+                        /\S+@\S+\.\S+/
+                    );
+                    if (answerPass) {
+                        return true;
+                    }
+                    return "Please enter a valid email.";
                 }
             },
             {
