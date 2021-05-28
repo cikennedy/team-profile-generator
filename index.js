@@ -52,6 +52,15 @@ function teamProfile() {
                 name: 'managerID',
                 message: 'Please enter the employee ID of the team manager.',
                 // Add validation
+                validate: answer => {
+                    const answerPass = answer.match(
+                        /^[1-9]\d*$/
+                    );
+                    if (answerPass) {
+                        return true;
+                    }
+                    return "Please enter a valid manager ID number."
+                }
             },
             {
                 type: 'input',
