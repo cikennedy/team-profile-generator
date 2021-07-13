@@ -5,6 +5,10 @@
 
   This is a Node.js command-line application that generates a webpage that displays a team's  basic information including, but not limited to, their names, employee ID's, GitHub profiles, and email addresses. 
 
+  [GitHub Repository](repository.com)
+
+  [Video Walkthrough](youtube.com)
+
   ## Table of Contents
 
   * [Installation](#installation)

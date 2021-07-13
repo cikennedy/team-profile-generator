@@ -37,9 +37,9 @@ const render = require("./src/template.js");
 const newTeam = [];
 const teamID = [];
 
-function teamProfile() {
+const teamProfile = () => {
     // Get manager's name, ID, email, office #
-    function teamManager() {
+    const teamManager = () => {
         inquirer.prompt([
             {
                 type: 'input',
@@ -107,7 +107,7 @@ function teamProfile() {
         });
     }
 
-    function addTeam() {
+    const addTeam = () => {
         inquirer.prompt([
             {
                 type: 'list',
@@ -119,8 +119,8 @@ function teamProfile() {
                     'None, finish building my team.'
                 ]
             }
-        ]).then(userChoice => {
-            switch(userChoice.memberChoice) {
+        ]).then(answer => {
+            switch (answer.action) {
                 case "Engineer":
                     teamEngineer();
                     break;
@@ -133,7 +133,7 @@ function teamProfile() {
         });
     }
 
-    function teamEngineer() {
+    const teamEngineer = () => {
         inquirer.prompt([
             {
                 type: 'input',
@@ -197,7 +197,7 @@ function teamProfile() {
         })
     }
 
-    function teamIntern() {
+    const teamIntern = () => {
         inquirer.prompt([
             {
                 type: 'input',
@@ -258,17 +258,17 @@ function teamProfile() {
             newTeam.push(newIntern);
             teamID.push(answers.internID);
             addTeam();
-    });
-}
+        });
+    }
 
-function createTeam() {
+    function createTeam() {
     if (!fs.existsSync(OUTPUT_DIR)) {
         fs.mkdirSync(OUTPUT_DIR)
     }
     fs.writeFileSync(outputPath, render(newTeam), "utf-8");
-}
+    }
 
-teamManager();
+    teamManager();
 
 }
 
