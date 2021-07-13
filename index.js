@@ -108,25 +108,29 @@ const teamProfile = () => {
     }
 
     const addTeam = () => {
+        // Add more team members or 
         inquirer.prompt([
             {
-                type: 'list',
-                name: 'teamChoice',
-                message: 'Which additional member would you like to add to the team?',
-                choices: [
-                    'Engineer',
-                    'Intern',
-                    'None, finish building my team.'
-                ]
-            }
-        ]).then(answer => {
-            switch (answer.action) {
+            type: 'list',
+            name: 'teamChoice',
+            message: 'Which additional member would you like to add to the team?',
+            choices: [
+                "Engineer",
+                "Intern",
+                "None, finish building my team."
+            ]
+        }
+        ]).then((userChoice) => {
+            switch (userChoice.teamChoice) {
+
                 case "Engineer":
                     teamEngineer();
                     break;
+
                 case "Intern":
                     teamIntern();
                     break;
+
                 default:
                     createTeam();
             }
@@ -195,6 +199,7 @@ const teamProfile = () => {
             teamID.push(answers.engineerID);
             addTeam();
         })
+
     }
 
     const teamIntern = () => {
