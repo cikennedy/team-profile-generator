@@ -1,5 +1,5 @@
 // Create team page 
-const buildTeamHTML = () => {
+const buildTeamHTML = team => {
 
     // Create manager html
     const buildManagerHTML = manager => {
