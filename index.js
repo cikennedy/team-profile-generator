@@ -29,6 +29,13 @@ The tests for these classes (in the `_tests_` directory) must ALL pass.
 Add validation to ensure that user input is in the proper format.
 */
 
+const OUTPUT_DIR = path.resolve(__dirname, "output")
+const outputPath = path.join(OUTPUT_DIR, "teamprofile.html");
+
+const render = require("./src/page-template.js");
+
+const newTeam = [];
+const teamID = [];
 
 function teamProfile() {
     // Get manager's name, ID, email, office #
@@ -36,7 +43,7 @@ function teamProfile() {
         inquirer.prompt([
             {
                 type: 'input',
-                name: 'manager',
+                name: 'managerName',
                 message: 'Please enter the name of the team manager.',
                 // Add validation
                 validate: answer => {
@@ -92,6 +99,12 @@ function teamProfile() {
                 }
             },
         ])
+        .then(answers => {
+            const newManager = new Manager(answers.managerName, answers.managerID, answers.managerEmail, answers.managerOffice);
+            newTeam.push(newManager);
+            teamID.push(answers.managerID);
+            addTeam();
+        });
     }
 
     function addTeam() {
@@ -105,16 +118,26 @@ function teamProfile() {
                     'Intern',
                     'None, finish building my team.'
                 ]
-
-            },
-        ])
+            }
+        ]).then(userChoice => {
+            switch(userChoice.memberChoice) {
+                case "Engineer":
+                    teamEngineer();
+                    break;
+                case "Intern":
+                    teamIntern();
+                    break;
+                default:
+                    createTeam();
+            }
+        });
     }
 
     function teamEngineer() {
         inquirer.prompt([
             {
                 type: 'input',
-                name: 'engineer',
+                name: 'engineerName',
                 message: 'Please enter the name of the engineer.',
                 // Add validation
                 validate: answer => {
@@ -165,15 +188,20 @@ function teamProfile() {
                     }
                     return "Please enter a valid GitHub username.";
                 }
-            },
-        ])
+            }
+        ]).then(answers => {
+            const newEngineer = new Engineer(answers.engineerName, answers.engineerID, answers.engineerEmail, answers.engineerGithub);
+            newTeam.push(newEngineer);
+            teamID.push(answers.engineerID);
+            addTeam();
+        })
     }
 
     function teamIntern() {
         inquirer.prompt([
             {
                 type: 'input',
-                name: 'intern',
+                name: 'internName',
                 message: 'Please enter the name of the intern.',
                 // Add validation
                 validate: answer => {
@@ -224,7 +252,24 @@ function teamProfile() {
                     }
                     return "Please enter a school.";
                 }
-            },
-        ])
-    }
+            }
+        ]).then(answers => {
+            const newIntern = new Intern(answers.internName, answers.internID, answers.internEmail, answers.school);
+            newTeam.push(newIntern);
+            teamID.push(answers.internID);
+            addTeam();
+    });
 }
+
+function createTeam() {
+    if (!fs.existsSync(OUTPUT_DIR)) {
+        fs.mkdirSync(OUTPUT_DIR)
+    }
+    fs.writeFileSync(outputPath, render(teamMembers), "utf-8");
+}
+
+teamManager();
+
+}
+
+teamProfile();
