@@ -32,7 +32,7 @@ Add validation to ensure that user input is in the proper format.
 const OUTPUT_DIR = path.resolve(__dirname, "output")
 const outputPath = path.join(OUTPUT_DIR, "teamprofile.html");
 
-const render = require("./src/page-template.js");
+const render = require("./src/template.js");
 
 const newTeam = [];
 const teamID = [];

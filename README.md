@@ -10,16 +10,10 @@
   * [Installation](#installation)
 
   * [Usage](#usage)
-
-  * [Credits](#credits)
   
   * [License](#license)
 
   * [Badges](#badges)
-
-  * [Features](#features)
-
-  * [Contribution](#contribution)
 
   * [Tests](#tests)
 
@@ -33,10 +27,6 @@
 
   Instructions
 
-  ## Credits
-
-  N/A
-
   ## License
 
   This project is licensed using the MIT license.
@@ -45,13 +35,6 @@
 
   ![GitHub License](https://img.shields.io/badge/license-MIT-yellow.svg)
 
-  ## Features
-
-  Features
-
-  ## Contribution
-
-  Contribution
 
   ## Tests
 
