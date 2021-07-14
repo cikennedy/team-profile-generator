@@ -10,7 +10,7 @@
 
   [Sample HTML](sample.com)
 
-  [Video Walkthrough](youtube.com)
+  [Video Walkthrough](https://youtu.be/7vAwuhkOvyw)
 
   ## Table of Contents
 
@@ -32,7 +32,9 @@
 
   ## Usage
 
-  To run this application, you can run the following command from the root directory of the repository: npm start 
+  To run this application, you can run the following command from the root directory of the repository: npm start
+
+  ![Prompt Screenshot](./assets/prompt-screenshot.png) 
 
   ## License
 
@@ -46,6 +48,8 @@
   ## Tests
 
   Tests can be run using the following command: npm test
+
+  ![Test Screenshot](./assets/test-screenshot.png) 
 
   ## Questions
 
