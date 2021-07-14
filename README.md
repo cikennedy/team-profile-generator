@@ -8,7 +8,7 @@
 
   [GitHub Repository](https://github.com/cikennedy/team-profile-generator)
 
-  [Sample HTML](sample.com)
+  [Sample HTML](https://cikennedy.github.io/team-profile-generator/)
 
   [Video Walkthrough](https://youtu.be/7vAwuhkOvyw)
 
