@@ -3,17 +3,6 @@
     color: #ffffff;
   }
   
-.individual-card {
-    margin: 5px;
-    width: 90%;
-    min-height: 20px;
-    background-color: goldenrod;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between
-  }
-  
   .individual-card-body {
     display: flex;
     flex-direction: column;

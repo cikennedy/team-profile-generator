@@ -11,7 +11,7 @@ const buildTeamHTML = team => {
         </div>
         <div class="individual-card-body">
             <ul class="list-group">
-                <li class="list-item">Manager ID: ${manager.getID()}</li>
+                <li class="list-item">ID: ${manager.getID()}</li>
                 <li class="list-item">Email: <a href="mailto:${manager.getEmail()}">${manager.getEmail()}</a></li>
                 <li class="list-item">Office Number: ${manager.getOffice()}</li>
             </ul>
@@ -30,9 +30,9 @@ const buildTeamHTML = team => {
         </div>
         <div class="individual-card-body">
             <ul class="list-group">
-                <li class="list-item">Manager ID: ${engineer.getID()}</li>
+                <li class="list-item">ID: ${engineer.getID()}</li>
                 <li class="list-item">Email: <a href="mailto:${engineer.getEmail()}">${engineer.getEmail()}</a></li>
-                <li class="list-item">Office Number: ${engineer.getGithub()}</li>
+                <li class="list-item">GitHub Username: ${engineer.getGithub()}</li>
             </ul>
         </div>
     </div>
@@ -49,9 +49,9 @@ const buildTeamHTML = team => {
         </div>
         <div class="individual-card-body">
             <ul class="list-group">
-                <li class="list-item">Manager ID: ${intern.getID()}</li>
+                <li class="list-item">ID: ${intern.getID()}</li>
                 <li class="list-item">Email: <a href="mailto:${intern.getEmail()}">${intern.getEmail()}</a></li>
-                <li class="list-item">Office Number: ${intern.getSchool()}</li>
+                <li class="list-item">School: ${intern.getSchool()}</li>
             </ul>
         </div>
     </div>
