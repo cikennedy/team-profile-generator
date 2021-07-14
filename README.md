@@ -8,7 +8,7 @@
 
   [GitHub Repository](https://github.com/cikennedy/team-profile-generator)
 
-  [Sample HTML]
+  [Sample HTML](sample.com)
 
   [Video Walkthrough](youtube.com)
 
@@ -28,11 +28,11 @@
 
   ## Installation
 
-  For this project to run properly, install the necessary dependencies by using the following terminal command: npm i
+  For this application to run properly, install the necessary dependencies by using the following terminal command: npm i
 
   ## Usage
 
-  Instructions
+  To run this application, you can run the following command from the root directory of the repository: npm start 
 
   ## License
 
@@ -45,7 +45,7 @@
 
   ## Tests
 
-  Test information. 
+  Tests can be run using the following command: npm test
 
   ## Questions
 
