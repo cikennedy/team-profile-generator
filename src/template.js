@@ -4,12 +4,12 @@ const buildTeamHTML = team => {
     // Create manager html
     const buildManagerHTML = manager => {
         return `
-        <div class="card">
-        <div class="header">
+        <div class="individual-card">
+        <div class="card-header">
             <h1 class="title">${manager.getName()}</h1>
             <h2 class="title">${manager.getRole()}</h2>
         </div>
-        <div class="body">
+        <div class="individual-card-body">
             <ul class="list-group">
                 <li class="list-item">Manager ID: ${manager.getID()}</li>
                 <li class="list-item">Email: <a href="mailto:${manager.getEmail()}">${manager.getEmail()}</a></li>
@@ -23,12 +23,12 @@ const buildTeamHTML = team => {
     // Create engineer html
     const buildEngineerHTML = engineer => {
         return `
-        <div class="card">
-        <div class="header">
+        <div class="individual-card">
+        <div class="card-header">
             <h1 class="title">${engineer.getName()}</h1>
             <h2 class="title">${engineer.getRole()}</h2>
         </div>
-        <div class="body">
+        <div class="individual-card-body">
             <ul class="list-group">
                 <li class="list-item">Manager ID: ${engineer.getID()}</li>
                 <li class="list-item">Email: <a href="mailto:${engineer.getEmail()}">${engineer.getEmail()}</a></li>
@@ -42,12 +42,12 @@ const buildTeamHTML = team => {
     // Create intern html
     const buildInternHTML = intern => {
         return `
-        <div class="card">
-        <div class="header">
+        <div class="individual-card">
+        <div class="card-header">
             <h1 class="title">${intern.getName()}</h1>
             <h2 class="title">${intern.getRole()}</h2>
         </div>
-        <div class="body">
+        <div class="individual-card-body">
             <ul class="list-group">
                 <li class="list-item">Manager ID: ${intern.getID()}</li>
                 <li class="list-item">Email: <a href="mailto:${intern.getEmail()}">${intern.getEmail()}</a></li>
