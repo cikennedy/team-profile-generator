@@ -1,16 +1,13 @@
-const { ExpectationFailed } = require('http-errors');
-const { iteratee } = require('lodash');
 const Employee = require('../lib/Employee');
 
-// Example Test Below, rework this 
-describe("function name", () => {
-    it("does this", () => {
-        const employee = new Employee("John");
+test("getName() test", () => {
+    const testValue = "John";
+    const e = new Employee(testValue);
+    expect(e.getName()).toBe(testValue);
+});
 
-        ExpectationFailed(employee.letters).toEqual(
-            expect.arrayContaining([expect.objectContaining({ char: "J"})])
-        );
-
-        expect(employee.letters[0]).toBeInstanceOf(Employee);
-    });
-})
+test("getID() test", () => {
+    const testValue = 5;
+    const e = new Employee("Greg", testValue);
+    expect(e.getID()).toBe(testValue);
+});
