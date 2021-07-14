@@ -12,7 +12,7 @@ const buildTeamHTML = team => {
         <div class="body">
             <ul class="list-group">
                 <li class="list-item">Manager ID: ${manager.getID()}</li>
-                <li class="list-item">Email: ${manager.getEmail()}</li>
+                <li class="list-item">Email: <a href="mailto:${manager.getEmail()}">${manager.getEmail()}</a></li>
                 <li class="list-item">Office Number: ${manager.getOffice()}</li>
             </ul>
         </div>
@@ -31,7 +31,7 @@ const buildTeamHTML = team => {
         <div class="body">
             <ul class="list-group">
                 <li class="list-item">Manager ID: ${engineer.getID()}</li>
-                <li class="list-item">Email: ${engineer.getEmail()}</li>
+                <li class="list-item">Email: <a href="mailto:${engineer.getEmail()}">${engineer.getEmail()}</a></li>
                 <li class="list-item">Office Number: ${engineer.getGithub()}</li>
             </ul>
         </div>
@@ -50,7 +50,7 @@ const buildTeamHTML = team => {
         <div class="body">
             <ul class="list-group">
                 <li class="list-item">Manager ID: ${intern.getID()}</li>
-                <li class="list-item">Email: ${intern.getEmail()}</li>
+                <li class="list-item">Email: <a href="mailto:${intern.getEmail()}">${intern.getEmail()}</a></li>
                 <li class="list-item">Office Number: ${intern.getSchool()}</li>
             </ul>
         </div>
