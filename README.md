@@ -3,9 +3,10 @@
 
   ## Description
 
-  This is a Node.js command-line application that generates a webpage that displays a team's  basic information including, but not limited to, their names, employee ID's, GitHub profiles, and email addresses. 
+  This is a Node.js command-line application that generates a webpage that displays a team's basic information including, but not limited to, their names, employee ID's, GitHub profiles, and email addresses. This is useful for the organization as it can provide quick access to team member information. 
 
-  [GitHub Repository](repository.com)
+
+  [GitHub Repository](https://github.com/cikennedy/team-profile-generator)
 
   [Video Walkthrough](youtube.com)
 
